@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: scg-app-service
+  name: otd-OTD_MSA_Back_Life
   namespace: app
+  labels:
+    app: otd-OTD_MSA_Back_Life
 spec:
   selector:
-    app: scg-app
+    app: otd-OTD_MSA_Back_Life
   ports:
     - name: http
       protocol: TCP
       port: 8080
       targetPort: 8080
-      nodePort: 30880
-  type: NodePort
+  type: ClusterIP
