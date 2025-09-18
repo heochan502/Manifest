@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otd-OTD_MSA_Back_Life-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: otd-OTD_MSA_Back_Life
+  template:
+    metadata:
+      labels:
+        app: otd-OTD_MSA_Back_Life
+    spec:
+      containers:
+      - name: otd-OTD_MSA_Back_Life
+        image: harbor.greenart.n-e.kr/otd/OTD_MSA_Back_Life:1
+        ports:
+          - containerPort: 8080
+        volumeMounts:
+          - name: host-volume
+            mountPath: /home/download
+      volumes:
+        - name: host-volume
+          hostPath:
+            path: /home/green/download
+            type: DirectoryOrCreate      
+      imagePullSecrets:
+      - name: harbor-creds
+      serviceAccountName: spring-gateway
