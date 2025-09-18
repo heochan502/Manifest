@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: otd-OTD_MSA_Back_Life-deployment
+  name: otd-life-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: otd-OTD_MSA_Back_Life
+      app: otd-life
   template:
     metadata:
       labels:
-        app: otd-OTD_MSA_Back_Life
+        app: otd-life
     spec:
       containers:
-      - name: otd-OTD_MSA_Back_Life
-        image: harbor.greenart.n-e.kr/otd/OTD_MSA_Back_Life:1
+      - name: otd-life
+        image: harbor.greenart.n-e.kr/otd/life:1
         ports:
           - containerPort: 8080
         volumeMounts:

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: otd-OTD_MSA_Back_User
+  name: otd-user
   namespace: app
   labels:
-    app: otd-OTD_MSA_Back_User
+    app: otd-user
 spec:
   selector:
-    app: otd-OTD_MSA_Back_User
+    app: otd-user
   ports:
     - name: http
       protocol: TCP

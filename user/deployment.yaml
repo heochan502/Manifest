@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: otd-OTD_MSA_Back_User-deployment
+  name: otd-user-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: otd-OTD_MSA_Back_User
+      app: otd-user
   template:
     metadata:
       labels:
-        app: otd-OTD_MSA_Back_User
+        app: otd-user
     spec:
       containers:
-      - name: otd-OTD_MSA_Back_User
-        image: harbor.greenart.n-e.kr/otd/OTD_MSA_Back_User:1
+      - name: otd-user
+        image: harbor.greenart.n-e.kr/otd/user:1
         ports:
           - containerPort: 8080
         volumeMounts:

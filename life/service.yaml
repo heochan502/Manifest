@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: otd-OTD_MSA_Back_Life
+  name: otd-life
   namespace: app
   labels:
-    app: otd-OTD_MSA_Back_Life
+    app: otd-life
 spec:
   selector:
-    app: otd-OTD_MSA_Back_Life
+    app: otd-life
   ports:
     - name: http
       protocol: TCP
