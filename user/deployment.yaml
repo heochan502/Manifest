@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: otd-user
-        image: harbor.greenart.n-e.kr/otd/user:1
+        image: harbor.greenart.n-e.kr/otd/user:2
         ports:
           - containerPort: 8080
         volumeMounts:
