@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: otd-life
-        image: harbor.greenart.n-e.kr/otd/life:1
+        image: harbor.greenart.n-e.kr/otd/life:2
         ports:
           - containerPort: 8080
         volumeMounts:
