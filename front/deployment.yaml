@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: front-app
-        image: harbor.greenart.n-e.kr/otd/front:6
+        image: harbor.greenart.n-e.kr/otd/front:14
         ports:
         - containerPort: 80
       imagePullSecrets:
