@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - harbor.greenart.n-e.kr/otd/front:15
+  - harbor.greenart.n-e.kr/otd/front:16
